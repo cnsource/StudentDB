@@ -1,5 +1,6 @@
 package com.studentdb.demo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -75,9 +76,6 @@ private Dao dao=null;
         Toast.makeText(this,info, Toast.LENGTH_SHORT).show();
     }
     public void findAll(View view){
-        List<Student> students=dao.findAll();
-        for (Student student:students){
-            Log.i("StuInfo:",student.toString());
-        }
+        startActivity(new Intent(this,ListActivuty.class));
     }
 }
